@@ -75,16 +75,34 @@ class _MyHomePageState extends State<MyHomePage> {
                 '$_counter',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              ElevatedButton(
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/image/button_circle.png"))
+                ),                child:
+                ElevatedButton(
                 onPressed: _incrementCounter,
               child: Text("Increase"),),
-              ElevatedButton(
+              ),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/image/button_circle.png"))
+                ),                child:
+                ElevatedButton(
+                onPressed: _decreaseCounter,
+                child: Text("Decrease"),
+              ),
+              ),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/image/button_circle.png"))
+                ),                child:
+                ElevatedButton(
                 onPressed: _resetCounter,
                 child: Text("Reset"),
               ),
-              ElevatedButton(
-                onPressed: _decreaseCounter,
-                child: Text("Decrease"),
               ),
             ],
           ),
