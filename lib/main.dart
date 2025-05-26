@@ -76,6 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               ElevatedButton(
+                onPressed: _incrementCounter,
+              child: Text("Increase"),),
+              ElevatedButton(
                 onPressed: _resetCounter,
                 child: Text("Reset"),
               ),
