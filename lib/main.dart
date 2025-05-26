@@ -78,18 +78,22 @@ class _MyHomePageState extends State<MyHomePage> {
               DecoratedBox(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"))
-                ),                child:
-                ElevatedButton(
+                    image: AssetImage("assets/image/button_circle.png"),
+                    fit: BoxFit.contain)
+                ),
+                child:
+                TextButton(
                 onPressed: _incrementCounter,
               child: Text("Increase"),),
               ),
               DecoratedBox(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"))
-                ),                child:
-                ElevatedButton(
+                    image: AssetImage("assets/image/button_circle.png"),
+                    fit: BoxFit.contain)
+                ),
+                child:
+                TextButton(
                 onPressed: _decreaseCounter,
                 child: Text("Decrease"),
               ),
@@ -97,9 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
               DecoratedBox(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"))
+                    image: AssetImage("assets/image/button_circle.png"),
+                    fit: BoxFit.contain)
                 ),                child:
-                ElevatedButton(
+                TextButton(
                 onPressed: _resetCounter,
                 child: Text("Reset"),
               ),
