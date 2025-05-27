@@ -59,58 +59,65 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:Container(
-          decoration: BoxDecoration(
-            // TODO: change the background image size to fit the child and change style color
-            image: DecorationImage(
-              image: AssetImage("assets/image/dhikr_8bit_background.png"),
-              fit: BoxFit.contain
+      body:Center(
+        child: Container(
+            decoration: BoxDecoration(
+              // TODO: change the background image size to fit the child and change style color
+              image: DecorationImage(
+                image: AssetImage("assets/image/dhikr_8bit_background.png"),
+                fit: BoxFit.contain
+                ),
               ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text('You have pushed the button this many times:'),
+                Text(
+                  '$_counter',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/image/button_circle.png"),
+                      fit: BoxFit.contain)
+                  ),
+                  child:
+                  TextButton(
+                  onPressed: _incrementCounter,
+                child: Text("Increase"),),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/image/button_circle.png"),
+                      fit: BoxFit.contain)
+                  ),
+                  child:
+                  TextButton(
+                  onPressed: _decreaseCounter,
+                  child: Text("Decrease"),
+                ),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/image/button_circle.png"),
+                      fit: BoxFit.contain)
+                  ),                child:
+                  TextButton(
+                  onPressed: _resetCounter,
+                  child: Text("Reset"),
+                ),
+                ),
+                  ],
+                )
+              ],
             ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text('You have pushed the button this many times:'),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"),
-                    fit: BoxFit.contain)
-                ),
-                child:
-                TextButton(
-                onPressed: _incrementCounter,
-              child: Text("Increase"),),
-              ),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"),
-                    fit: BoxFit.contain)
-                ),
-                child:
-                TextButton(
-                onPressed: _decreaseCounter,
-                child: Text("Decrease"),
-              ),
-              ),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/image/button_circle.png"),
-                    fit: BoxFit.contain)
-                ),                child:
-                TextButton(
-                onPressed: _resetCounter,
-                child: Text("Reset"),
-              ),
-              ),
-            ],
-          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton.large(
         onPressed: _incrementCounter,
