@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   '$_counter',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
+                // TODO(): make auto resizing of each circle icon and the text inside
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
